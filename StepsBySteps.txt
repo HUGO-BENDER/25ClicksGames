@@ -1,0 +1,31 @@
+cmd
+Step 000: 
+	reinstall node
+	reinstall angular-cli
+	
+GIT	
+Step 001: 
+	Create repository
+
+cmd 
+Step 002:
+Create project
+	ir al directorio de nuestro codigo <C:\Users\hbender\Documents\Code>
+    ng new <project> --style=scss --routing --skipTests
+	ng new Monstre --style=scss --routing --skipTests
+	ng new twentyfiveclicksgames --style=scss --routing --skipTests
+	
+VS Code.  	
+Step 003:
+	Open folder
+	new terminal
+	ng serve -o
+
+Step 004:
+	clean proyect
+    Add this file StepsBySteps
+
+Step 005
+	git remote add origin https://github.com/HUGO-BENDER/25ClicksGames.git
+	git branch -M main
+	git push -u origin main
