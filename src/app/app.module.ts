@@ -10,7 +10,7 @@ import { PagePolicyPrivacyComponent } from './components/page-policy-privacy/pag
 import { PageServiceConditionsComponent } from './components/page-service-conditions/page-service-conditions.component';
 import { AppLogoComponent } from './shared-components/app-logo/app-logo.component';
 import { AppToolbarComponent } from './components/app-toolbar/app-toolbar.component';
-import { RefactoryComponent } from './games/refactory/refactory/refactory.component';
+import { AppFooterComponent } from './components/app-footer/app-footer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { RefactoryComponent } from './games/refactory/refactory/refactory.compon
     PageServiceConditionsComponent,
     AppLogoComponent,
     AppToolbarComponent,
-    RefactoryComponent
+    AppFooterComponent
   ],
   imports: [
     BrowserModule,

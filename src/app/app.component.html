@@ -1,5 +1,13 @@
 
-<router-outlet></router-outlet>
+<div *ngIf="!isLoading" class="app-container">
+  <header *ngIf="checkIfShowHeaderAndFooter()" class="mat-elevation-z10">
+    <app-toolbar></app-toolbar>
+  </header>
+  <router-outlet class="router-outlet"></router-outlet>
+  <footer *ngIf="checkIfShowHeaderAndFooter()">
+    <app-footer></app-footer>
+  </footer>
+</div>
 
 <div *ngIf="isLoading">
   <div id="wrapper-logo">

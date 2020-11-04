@@ -37,14 +37,33 @@ Step 006:
 	css for screen src\styles.scss    is global css
 	
 Step 007:
-	Start Routes 
+	Start Routes y structure of the site
 	create ng g module components/appRouting
 	or move app-routing.module.ts to components/app-routing
+	ng g component components/app-toolbar		 change selector to 'app-toolbar'
+	ng g component components/app-footer         change selector to 'app-footer'
+	ng g module components/AppMaterial
+    ng g module components/app-config
+	
     ng g c components/pageHome
     ng g c components/pageAbout
     ng g c components/pageNotFound
-    ng g c components/pageGame	
+    ng g c components/page-policy-privacy
+    ng g c components/page-service-conditions
 	
+	ng g module shared-components/shared
+    ng g c shared-components/app-logo
+
+	ng g interface components/app-model/metadata
 	
+    ng g c games/refactory/refactory
+	
+Step 008:	
+	subscribe to Router events en app.component.ts
+	this.subscribeToRouterEventsAndKeepCurrentUrl();
+	whit currentURL make   checkIfShowHeaderAndFooter(): boolean {
+		return !this.currentUrl.startsWith('/game');
+	  }
+	set app-toolbar / router-outlet / app-footer in app.component.html	
 	
 	
