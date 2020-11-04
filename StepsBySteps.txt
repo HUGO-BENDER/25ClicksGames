@@ -36,6 +36,15 @@ Step 006:
 	var isLoading
 	css for screen src\styles.scss    is global css
 	
+Step 007:
+	Start Routes 
+	create ng g module components/appRouting
+	or move app-routing.module.ts to components/app-routing
+    ng g c components/pageHome
+    ng g c components/pageAbout
+    ng g c components/pageNotFound
+    ng g c components/pageGame	
+	
 	
 	
 	
