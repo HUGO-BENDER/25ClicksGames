@@ -29,3 +29,13 @@ Step 005
 	git remote add origin https://github.com/HUGO-BENDER/25ClicksGames.git
 	git branch -M main
 	git push -u origin main
+
+Step 006:
+	Start working in src/app/app.component.html   Main html
+	create <div> loading or wait screen
+	var isLoading
+	css for screen src\styles.scss    is global css
+	
+	
+	
+	

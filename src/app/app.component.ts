@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'twentyfiveclicksgames';
+//#region Variables 
+  isLoading = true;
+
+//#endregion
+
+//#region Constructor
+//#endregion
+
+
+
+
+
+
 }
