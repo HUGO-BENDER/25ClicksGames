@@ -12,7 +12,6 @@ Step 002:
 Create project
 	ir al directorio de nuestro codigo <C:\Users\hbender\Documents\Code>
     ng new <project> --style=scss --routing --skipTests
-	ng new Monstre --style=scss --routing --skipTests
 	ng new twentyfiveclicksgames --style=scss --routing --skipTests
 	
 VS Code.  	
@@ -52,11 +51,13 @@ Step 007:
     ng g c components/page-service-conditions
 	
 	ng g module shared-components/shared
-    ng g c shared-components/app-logo
+    ng g c shared-components/app-logo       change selector: 'app-sidenav',
+    ng g c shared-components/app-sidenav
 
 	ng g interface components/app-model/metadata
 	
-    ng g c games/refactory/refactory
+	ng g module games/refactory/refactory --routing
+    ng g c games/refactory/refactory      'RefactoryComponent' is listed in the declarations of the NgModule 'RefactoryModule'.
 	
 Step 008:	
 	subscribe to Router events en app.component.ts
@@ -66,4 +67,11 @@ Step 008:
 	  }
 	set app-toolbar / router-outlet / app-footer in app.component.html	
 	
+Step 009:	
+	Material
+	ng add @angular/material
+	In app-material.module.ts Add  import { MatSidenavModule } from '@angular/material/sidenav';
+
+
+
 	

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { RefactoryComponent } from '../refactory/refactory.component';
+import { RefactoryComponent } from '../refactory.component';
 
 const routes: Routes = [
   {

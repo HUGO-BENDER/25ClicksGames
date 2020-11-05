@@ -8,9 +8,10 @@ import { PageAboutComponent } from './components/page-about/page-about.component
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { PagePolicyPrivacyComponent } from './components/page-policy-privacy/page-policy-privacy.component';
 import { PageServiceConditionsComponent } from './components/page-service-conditions/page-service-conditions.component';
-import { AppLogoComponent } from './shared-components/app-logo/app-logo.component';
 import { AppToolbarComponent } from './components/app-toolbar/app-toolbar.component';
 import { AppFooterComponent } from './components/app-footer/app-footer.component';
+import { SharedModule } from './shared-components/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,15 +21,16 @@ import { AppFooterComponent } from './components/app-footer/app-footer.component
     PageNotFoundComponent,
     PagePolicyPrivacyComponent,
     PageServiceConditionsComponent,
-    AppLogoComponent,
     AppToolbarComponent,
-    AppFooterComponent
+    AppFooterComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

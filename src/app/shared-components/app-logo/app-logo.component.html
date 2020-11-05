@@ -1,1 +1,8 @@
-<p>app-logo works!</p>
+<div class="contenedor-logo" aria-label="Toggle sidenav">
+    <div class="contenedor-logo" [ngClass]="{'contenedor-logo-mini': inSmallScreen}">
+      <img class="shadow10" src="../../../assets/logo/fondoLogo.svg" />
+    </div>
+    <div class="contenedor-logo anim-in anim-hover" [ngClass]="{'contenedor-logo-mini': inSmallScreen}">
+      <img src="../../../assets/logo/letraLogo.svg" />
+    </div>
+  </div>
