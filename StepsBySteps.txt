@@ -51,13 +51,13 @@ Step 007:
     ng g c components/page-service-conditions
 	
 	ng g module shared-components/shared
-    ng g c shared-components/app-logo       change selector: 'app-sidenav',
-    ng g c shared-components/app-sidenav
+    ng g c shared-components/app-logo       change selector: 'app-logo',
+    ng g c shared-components/app-sidenav    change selector: 'app-sidenav',
 
 	ng g interface components/app-model/metadata
 	
-	ng g module games/refactory/refactory --routing
-    ng g c games/refactory/refactory      'RefactoryComponent' is listed in the declarations of the NgModule 'RefactoryModule'.
+	ng g module games/refactory --routing
+    ng g c games/refactory      'RefactoryComponent' is listed in the declarations of the NgModule 'RefactoryModule'.
 	
 Step 008:	
 	subscribe to Router events en app.component.ts
@@ -71,7 +71,20 @@ Step 009:
 	Material
 	ng add @angular/material
 	In app-material.module.ts Add  import { MatSidenavModule } from '@angular/material/sidenav';
-
-
-
+	Create layout basic of game.  Sidenav gameDisplay gameControls
+		<div class="game-controls">
+            <div class="game-controls-top-bar">
+                <div class="game-controls-left">
+				<div class="game-controls-center">
+				<div class="game-controls-rigth">
+			<div class="game-controls-main">
+			
+Step 010
+	(Create the board)
+	add Pan Zoom
+	ng g directive shared-components/panAndZoom
+	ng g interface components/app-model/board
+	ng generate service games/refactory/services/GameService
+				
+				
 	

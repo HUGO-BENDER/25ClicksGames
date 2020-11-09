@@ -30,7 +30,7 @@ const routes: Routes = [
   {
     path: 'games/refactory/:id/:user',
     loadChildren: () =>
-      import('../../games/refactory/refactory/refactory.module').then(
+      import('../../games/refactory/refactory.module').then(
         (m) => m.RefactoryModule
       ),
   },

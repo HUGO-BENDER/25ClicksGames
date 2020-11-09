@@ -6,18 +6,20 @@ import {
   trigger,
 } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { BoardGame } from 'src/app/components/app-model/board';
+import { GameService } from './services/game-service.service';
 
 @Component({
   selector: 'game-refactory',
   templateUrl: './refactory.component.html',
   styleUrls: ['./refactory.component.scss'],
   animations: [
-    trigger('animReadyToSend', [
+    trigger('slideInButtonsTurn', [
       state(
         'outside',
         style({
           position: 'absolute',
-          transform: 'translateX(-100%)',
+          transform: 'translateX(-1000%)',
         })
       ),
       state(
@@ -27,21 +29,47 @@ import { Component, OnInit } from '@angular/core';
           transform: 'translateX(0)',
         })
       ),
-      transition('outside <=> inside', animate('300ms')),
+      transition('outside <=> inside', animate('500ms')),
     ]),
   ],
 })
+//TODO Sacar las animaciones a un archivo aparte
 export class RefactoryComponent implements OnInit {
   //#region Variables
   stateButtons = 'inside';
+  stateGame = 0;
+  boardGame: BoardGame;
+  userlogined = true;
+
   //#endregion
 
-  constructor() {}
+  constructor(private svcGame: GameService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // this.InicializeGame();
+    // this.CheckUser();
+    // if (this.userlogined) {
+    this.StartGame();
+    // } else {
+    //   this.GoHome();
+    // }
+  }
+
+  InicializeGame() {
+    throw new Error('Method not implemented.');
+  }
+
+  StartGame() {
+    this.boardGame = this.svcGame.getBoard('ddddd');
+  }
 
   // -- Botons
-  public resetTurn() {
+  // drawerToggleAndResize(drawer: any) {
+  //   drawer.toggle();
+  //   ResizeAll();
+  // }
+
+  resetTurn() {
     // for (const hc of this.hand) {
     //   hc.dragEnable = true;
     //   if (hc.previousValues) {
@@ -59,7 +87,7 @@ export class RefactoryComponent implements OnInit {
     this.stateButtons = 'outside';
   }
 
-  public sendTurn() {
+  sendTurn() {
     // const idGame = this.route.snapshot.paramMap.get('id');
     // this.afsGame.senTurn(
     //   this.hand, this.boardCellChanged,

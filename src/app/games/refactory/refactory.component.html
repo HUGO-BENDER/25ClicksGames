@@ -1,0 +1,65 @@
+<mat-sidenav-container class="fullScreenWrapper">
+  <mat-sidenav
+    #gameRefactorySidenav
+    class="game-sidenav"
+    fixedInViewport="true"
+    attr.role="navigation"
+    mode="push"
+  >
+    <app-sidenav></app-sidenav>
+    lateral
+  </mat-sidenav>
+  <mat-sidenav-content class="game-sidenav-content">
+    <div class="game-display" PanAndZoom>
+      <mat-grid-list
+        class="boardgame"
+        cols="10"
+        rowHeight="100px"
+        gutterSize="0px"
+      >
+        <mat-grid-tile *ngFor="let t of boardGame.tiles" class="cellGrid">
+          {{ t.description }}
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+    <div class="game-controls">
+      <div class="game-controls-top-bar">
+        <div class="game-controls-left">
+          <app-logo
+            (click)="gameRefactorySidenav.toggle()"
+            class="contenedor-logo"
+          ></app-logo>
+        </div>
+        <div class="game-controls-center">
+          <span *ngIf="stateGame == 0">
+            userlogined.displayName es tu turno. Te están esperando</span
+          >
+          <span *ngIf="stateGame == 1">
+            xWAITING. Esperando a los otros jugadores</span
+          >
+        </div>
+        <div class="game-controls-rigth">
+          <div [@slideInButtonsTurn]="stateButtons">
+            <button
+              mat-raised-button
+              class="btn-send-turn"
+              (click)="resetTurn()"
+            >
+              <mat-icon class="mat-24" aria-label="reset turno">undo</mat-icon>
+            </button>
+            <button
+              mat-raised-button
+              class="btn-send-turn"
+              (click)="sendTurn()"
+            >
+              xEnviar turno
+              <mat-icon class="mat-24" aria-label="enviar turno">send</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-controls-main"></div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
