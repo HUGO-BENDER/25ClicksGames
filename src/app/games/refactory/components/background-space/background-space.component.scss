@@ -1,0 +1,57 @@
+.layer-game-display {
+  top: 0;
+  left: 0;
+  position: absolute;
+  min-height: 80vh;
+  max-height: 80vh;
+  min-width: 100vw;
+  max-width: 100vw;
+  background-size: contain;
+  background-repeat: repeat;
+  background-attachment: scroll;
+
+  overflow: hidden;
+  user-select: none;
+}
+
+.position-out {
+  top: 1px;
+  animation: slideshow-out-in 120s linear infinite;
+}
+
+.position-in {
+  animation: slideshow-in-out 120s linear infinite;
+}
+
+.background-space {
+  background-image: url("../../../../../assets/refactory/NebulaRed.png");
+  animation-duration: 150s;
+}
+
+.background-small-star {
+  background-image: url("../../../../../assets/refactory/StarsSmall.png");
+  animation-duration: 120s;
+}
+
+.background-big-star {
+  background-image: url("../../../../../assets/refactory/StarsBig.png");
+  animation-duration: 80s;
+}
+
+@keyframes slideshow-out-in {
+  0% {
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideshow-in-out {
+  0% {
+    transform: translate3d(0, 0%, 0);
+  }
+  100% {
+    transform: translate3d(0, 100%, 0);
+  }
+}

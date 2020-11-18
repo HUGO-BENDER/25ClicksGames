@@ -11,10 +11,12 @@ import { AppMaterialModule } from '../../components/app-material/app-material.mo
 //#region Shared
 import { SharedModule } from '../../shared-components/shared.module';
 import { PanAndZoomDirective } from 'src/app/shared-components/app-pan-and-zoom/pan-and-zoom.directive';
+import { TileGameComponent } from './components/tile-game/tile-game.component';
+import { BackgroundSpaceComponent } from './components/background-space/background-space.component';
 //#endregion
 
 @NgModule({
-  declarations: [RefactoryComponent, PanAndZoomDirective],
+  declarations: [RefactoryComponent, PanAndZoomDirective, TileGameComponent, BackgroundSpaceComponent],
   imports: [
     CommonModule,
     RefactoryRoutingModule,

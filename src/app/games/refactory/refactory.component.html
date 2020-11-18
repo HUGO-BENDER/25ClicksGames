@@ -10,18 +10,22 @@
     lateral
   </mat-sidenav>
   <mat-sidenav-content class="game-sidenav-content">
-    <div class="game-display" PanAndZoom>
-      <mat-grid-list
-        class="boardgame"
-        cols="10"
-        rowHeight="100px"
-        gutterSize="0px"
-      >
-        <mat-grid-tile *ngFor="let t of boardGame.tiles" class="cellGrid">
-          {{ t.description }}
-        </mat-grid-tile>
-      </mat-grid-list>
+    <div class="game-display">
+      <background-space class="layer-game-display"></background-space>
+      <div class="layer-game-display" PanAndZoom>
+        <mat-grid-list
+          class="boardgame"
+          cols="10"
+          rowHeight="100px"
+          gutterSize="0px"
+        >
+          <mat-grid-tile *ngFor="let t of boardGame.tiles" class="cellGrid">
+            <app-tile-game [TileData]="t"></app-tile-game>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
     </div>
+
     <div class="game-controls">
       <div class="game-controls-top-bar">
         <div class="game-controls-left">

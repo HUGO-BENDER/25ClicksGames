@@ -85,6 +85,19 @@ Step 010
 	ng g directive shared-components/panAndZoom
 	ng g interface components/app-model/board
 	ng generate service games/refactory/services/GameService
+	ng generate c games/refactory/components/tileGame	
+	ng generate c games/refactory/components/backgroundSpace			
+				
+	Create effect parallax for the components/backgroundSpace	
+	Create effect onOver for components/tileGame	
 				
 				
+				
+				
+				
+				
+				
+				
+				
+https://graphicriver.net/item/space-shooter-sprites-vol2/17298810				
 	

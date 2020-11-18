@@ -14,6 +14,7 @@ export class GameService {
       this.auxBoardGame.tiles.push({
         id: i,
         description: 'desc_' + i,
+        typeTileGame: 0,
       });
     }
     return this.auxBoardGame;
