@@ -64,9 +64,9 @@ export class PanAndZoomDirective {
   @HostListener('mousemove', ['$event']) onMouseMove(event: any) {
     this.onPan(event);
   }
-  @HostListener('mouseenter') onMouseEnter() {
-    this.highlight('yellow');
-  }
+  // @HostListener('mouseenter') onMouseEnter() {
+  //   this.highlight('yellow');
+  // }
   @HostListener('mouseleave') onMouseLeave() {
     this.onLeave();
   }
@@ -253,7 +253,7 @@ export class PanAndZoomDirective {
   private onLeave() {
     this.elementFrame.style.cursor = 'default';
     this.frameOnPan = false;
-    this.highlight(null);
+    // this.highlight(null);
   }
   private mouseWheelFunc(e: any) {
     e = window.event || e; // old IE support
@@ -307,9 +307,9 @@ export class PanAndZoomDirective {
       e.preventDefault();
     }
   }
-  private highlight(color: string) {
-    this.elementFrame.style.backgroundColor = color;
-  }
+  // private highlight(color: string) {
+  //   this.elementFrame.style.backgroundColor = color;
+  // }
   private applyChanges(dataToApply: ScaleAndPoint) {
     let transformation =
       'translate(' +

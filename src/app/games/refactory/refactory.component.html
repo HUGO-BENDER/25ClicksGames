@@ -12,17 +12,15 @@
   <mat-sidenav-content class="game-sidenav-content">
     <div class="game-display">
       <background-space class="layer-game-display"></background-space>
-      <div class="layer-game-display" PanAndZoom>
-        <mat-grid-list
-          class="boardgame"
-          cols="10"
-          rowHeight="100px"
-          gutterSize="0px"
-        >
-          <mat-grid-tile *ngFor="let t of boardGame.tiles" class="cellGrid">
-            <app-tile-game [TileData]="t"></app-tile-game>
-          </mat-grid-tile>
-        </mat-grid-list>
+      <div class="layer-game-display" PanAndZoom (dragleave)="onDragLeave()">
+        <div class="boardgameGrid">
+          <app-tile-game
+            (drop)="onDrop($event, t)"
+            (dragover)="onDragOver($event, t)"
+            *ngFor="let t of boardGame.tiles; index as i"
+            [TileData]="t"
+          ></app-tile-game>
+        </div>
       </div>
     </div>
 
@@ -57,13 +55,33 @@
               (click)="sendTurn()"
             >
               xEnviar turno
-              <mat-icon class="mat-24" aria-label="enviar turno">send</mat-icon>
+              <mat-icon class="mat-24" aria-label="enviar turno">redo</mat-icon>
             </button>
           </div>
         </div>
       </div>
 
-      <div class="game-controls-main"></div>
+      <div class="game-controls-main">
+        <button mat-stroked-button (click)="rotateCardInHand(-90)">
+          <mat-icon
+            class="mat-36"
+            style="transform: rotate(-90deg)"
+            aria-label="-90º"
+            >redo</mat-icon
+          >
+        </button>
+        <div class="card" draggable="true" (dragstart)="startDrag($event)">
+          <app-tile-game [TileData]="cardInHand"></app-tile-game>
+        </div>
+        <button mat-stroked-button (click)="rotateCardInHand(90)">
+          <mat-icon
+            class="mat-36"
+            style="transform: rotate(90deg)"
+            aria-label="+90º"
+            >undo</mat-icon
+          >
+        </button>
+      </div>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

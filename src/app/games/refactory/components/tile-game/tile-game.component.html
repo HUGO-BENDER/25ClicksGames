@@ -1,8 +1,29 @@
 <div class="tileGame" (click)="ActionTile()">
-  <!-- <img
-    class="imgTileBackGround"
-    src="../../../../../assets/refactory/agua.png"
-  /> -->
-  <!-- <img class="imgTile imgTileIdle" /> -->
-  <img class="imgTile imgTileOnOver" />
+  <div
+    *ngIf="TileData.typeTileGame == _TypeTileGame.emptySpace"
+    [ngClass]="['imgTile', TileData.classCss]"
+  >
+    {{ TileData.classCss }}
+  </div>
+  <div
+    *ngIf="TileData.typeTileGame == _TypeTileGame.Reactor"
+    [ngClass]="['imgTile', 'imgTileIdleReactor', TileData.classCss]"
+  >
+    {{ TileData.classCss }}
+  </div>
+  <div
+    *ngIf="TileData.typeTileGame == _TypeTileGame.StraightConnector"
+    [ngClass]="['imgTile', 'imgTileIdleRecta', TileData.classCss]"
+  >
+    {{ TileData.classCss }}
+  </div>
+  <!-- <div
+    *ngIf="TileData.typeTileGame == _TypeTileGame.CurvedConnector"
+    class="imgTile imgTileIdleRecta"
+  >
+    {{ TileData.typeTileGame }}
+  </div> -->
+  <!-- <div *ngIf="TileData.typeTileGame == 10" class="imgTile imgTileOnDragOver">
+    {{ TileData.typeTileGame }}
+  </div> -->
 </div>

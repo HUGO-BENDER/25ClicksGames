@@ -16,7 +16,12 @@ import { BackgroundSpaceComponent } from './components/background-space/backgrou
 //#endregion
 
 @NgModule({
-  declarations: [RefactoryComponent, PanAndZoomDirective, TileGameComponent, BackgroundSpaceComponent],
+  declarations: [
+    RefactoryComponent,
+    PanAndZoomDirective,
+    TileGameComponent,
+    BackgroundSpaceComponent,
+  ],
   imports: [
     CommonModule,
     RefactoryRoutingModule,

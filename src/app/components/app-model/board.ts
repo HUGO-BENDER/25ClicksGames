@@ -2,7 +2,18 @@ export interface BoardGame {
   cols: number;
   rows: number;
   tiles: Array<TileGame>;
-  // tilesRows: Array<Array<Tile>>;
+}
+
+export enum TypeTileGame {
+  emptySpace,
+  Reactor,
+  StraightConnector,
+  CurvedConnector,
+}
+
+export enum StateTileGame {
+  Idle,
+  Destroyed,
 }
 
 export interface TileGame {
@@ -10,8 +21,12 @@ export interface TileGame {
   // displayNamePlayer: string;
   id: number;
   description: string;
-  typeTileGame: number;
+  typeTileGame: TypeTileGame;
+  state: StateTileGame;
+  borders: Array<number>;
+  dragOnOver?: boolean;
   dragEnable?: boolean;
-  classCss?: any;
+  rotation?: number;
+  classCss: string;
   previousValues?: TileGame;
 }
