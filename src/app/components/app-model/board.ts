@@ -24,8 +24,9 @@ export interface TileGame {
   typeTileGame: TypeTileGame;
   state: StateTileGame;
   borders: Array<number>;
-  dragOnOver?: boolean;
   dragEnable?: boolean;
+  showDropIsAllowed?: boolean;
+  showDropIsNotAllowed?: boolean;
   rotation?: number;
   classCss: string;
   previousValues?: TileGame;

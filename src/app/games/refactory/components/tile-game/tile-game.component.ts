@@ -16,9 +16,8 @@ export class TileGameComponent implements OnInit {
   ngOnInit(): void {}
 
   ActionTile() {
-    console.log(this.TileData.typeTileGame);
-    console.log(this.TileData.classCss);
-
+    console.log(this.TileData.typeTileGame + '  ' + this.TileData.classCss);
+    console.log('this.TileData.dragEnable ' + this.TileData.dragEnable);
     // if (this.TileData.typeTileGame === 4) {
     //   this.TileData.typeTileGame = 0;
     // } else {

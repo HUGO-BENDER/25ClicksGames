@@ -1,4 +1,4 @@
-<div class="tileGame" (click)="ActionTile()">
+<div class="tileGame" (click)="ActionTile()" id="{{ TileData.id }}">
   <div
     *ngIf="TileData.typeTileGame == _TypeTileGame.emptySpace"
     [ngClass]="['imgTile', TileData.classCss]"
@@ -23,7 +23,15 @@
   >
     {{ TileData.typeTileGame }}
   </div> -->
-  <!-- <div *ngIf="TileData.typeTileGame == 10" class="imgTile imgTileOnDragOver">
-    {{ TileData.typeTileGame }}
-  </div> -->
+  <div *ngIf="TileData.showDropIsAllowed" class="imgTile showdropIsAllowed">
+    <div class="imgTile drop-is-allowed-vertical"></div>
+    <div class="imgTile drop-is-allowed-horizontal"></div>
+  </div>
+  <div
+    *ngIf="TileData.showDropIsNotAllowed"
+    class="imgTile showDropIsNotAllowed"
+  >
+    <div class="imgTile drop-is-not-allowed-vertical"></div>
+    <div class="imgTile drop-is-not-allowed-horizontal"></div>
+  </div>
 </div>

@@ -12,7 +12,12 @@
   <mat-sidenav-content class="game-sidenav-content">
     <div class="game-display">
       <background-space class="layer-game-display"></background-space>
-      <div class="layer-game-display" PanAndZoom (dragleave)="onDragLeave()">
+      <div
+        class="layer-game-display"
+        PanAndZoom
+        (dragleave)="onDragLeave($event)"
+        (dragenter)="onDragEnter($event)"
+      >
         <div class="boardgameGrid">
           <app-tile-game
             (drop)="onDrop($event, t)"

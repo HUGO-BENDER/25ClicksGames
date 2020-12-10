@@ -92,7 +92,12 @@ Step 010
 	Create effect onOver for components/tileGame	
 				
 				
+Step 011 
+	drag and drop
+	functions in refactory.component.ts	
+	ng generate service games/refactory/services/DragService			
 				
+
 				
 				
 				
