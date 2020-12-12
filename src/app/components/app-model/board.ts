@@ -9,6 +9,7 @@ export enum TypeTileGame {
   Reactor,
   StraightConnector,
   CurvedConnector,
+  Cannon,
 }
 
 export enum StateTileGame {

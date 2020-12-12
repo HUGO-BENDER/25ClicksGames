@@ -68,18 +68,18 @@
     animation: playX 1s steps(5) infinite, playY 2s steps(2) infinite;
   }
 
-  .imgTileIdleRecta {
-    background-image: url("../../../../../assets/refactory/recta.svg");
+  .imgTileIdleStraight {
+    background-image: url("../../../../../assets/refactory/StraightConnector.svg");
     animation: playX 1s steps(5) infinite, playY 2s steps(2) infinite;
   }
 
-  .imgTileOnOver:hover {
-    background-image: url("../../../../../assets/refactory/target.svg");
+  .imgTileIdleCurved {
+    background-image: url("../../../../../assets/refactory/CurvedConnector.svg");
     animation: playX 1s steps(5) infinite, playY 2s steps(2) infinite;
   }
 
-  .imgTileOnDragOver {
-    background-image: url("../../../../../assets/refactory/target.svg");
+  .imgTileIdleCannon {
+    background-image: url("../../../../../assets/refactory/cannon.svg");
     animation: playX 1s steps(5) infinite, playY 2s steps(2) infinite;
   }
 

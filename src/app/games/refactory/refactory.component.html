@@ -67,7 +67,7 @@
       </div>
 
       <div class="game-controls-main">
-        <button mat-stroked-button (click)="rotateCardInHand(-90)">
+        <button mat-stroked-button (click)="rotateCardInHand(90)">
           <mat-icon
             class="mat-36"
             style="transform: rotate(-90deg)"
@@ -83,7 +83,7 @@
         >
           <app-tile-game [TileData]="cardInHand"></app-tile-game>
         </div>
-        <button mat-stroked-button (click)="rotateCardInHand(90)">
+        <button mat-stroked-button (click)="rotateCardInHand(-90)">
           <mat-icon
             class="mat-36"
             style="transform: rotate(90deg)"

@@ -13,10 +13,23 @@
   </div>
   <div
     *ngIf="TileData.typeTileGame == _TypeTileGame.StraightConnector"
-    [ngClass]="['imgTile', 'imgTileIdleRecta', TileData.classCss]"
+    [ngClass]="['imgTile', 'imgTileIdleStraight', TileData.classCss]"
   >
     {{ TileData.classCss }}
   </div>
+  <div
+    *ngIf="TileData.typeTileGame == _TypeTileGame.CurvedConnector"
+    [ngClass]="['imgTile', 'imgTileIdleCurved', TileData.classCss]"
+  >
+    {{ TileData.classCss }}
+  </div>
+  <div
+    *ngIf="TileData.typeTileGame == _TypeTileGame.Cannon"
+    [ngClass]="['imgTile', 'imgTileIdleCannon', TileData.classCss]"
+  >
+    {{ TileData.classCss }}
+  </div>
+
   <!-- <div
     *ngIf="TileData.typeTileGame == _TypeTileGame.CurvedConnector"
     class="imgTile imgTileIdleRecta"

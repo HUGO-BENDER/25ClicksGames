@@ -54,7 +54,7 @@ export class RefactoryComponent implements OnInit {
 
   //#endregion
 
-  constructor(private svcGame: GameService, private svcDrag: DragService) {}
+  constructor(private svcGame: GameService, public svcDrag: DragService) {}
 
   ngOnInit(): void {
     // this.InicializeGame();
@@ -75,9 +75,9 @@ export class RefactoryComponent implements OnInit {
     this.cardInHand = {
       id: 101,
       description: 'desc_101',
-      typeTileGame: TypeTileGame.StraightConnector,
+      typeTileGame: TypeTileGame.Cannon,
       state: StateTileGame.Idle,
-      borders: [0, 1, 0, 1],
+      borders: [0, 1, 0, 0],
       rotation: 0,
       classCss: 'rotation0',
       dragEnable: true,

@@ -26,10 +26,10 @@ export class DragService {
       e.stopPropagation();
       e.preventDefault();
     } else {
-      e.dataTransfer.effecAllowed = 'move'; // Define el efecto como mover
-      e.dataTransfer.setData('Data', this.cardInHand.typeTileGame); // Coje el elemento que se va a mover
-      e.dataTransfer.setDragImage(e.target, 50, 50); // Define la imagen que se vera al ser arrastrado el elemento y por donde se coje el elemento que se va a mover (el raton aparece en la esquina sup_izq con 0,0)
-      e.target.style.opacity = '0.3'; // Establece la opacidad del elemento que se va arrastrar
+      e.dataTransfer.effecAllowed = 'move';
+      e.dataTransfer.setData('Data', this.cardInHand.typeTileGame);
+      e.dataTransfer.setDragImage(e.target, 50, 50);
+      e.target.style.opacity = '0.3';
     }
   }
 
@@ -126,7 +126,7 @@ export class DragService {
     if (t.id >= this.boardGame.cols) {
       if (
         this.boardGame.tiles[t.id - this.boardGame.cols].borders[2] ==
-          this.cardInHand.borders[0 + this.cardInHand.rotation / 90] ||
+          this.cardInHand.borders[0 + (4 - this.cardInHand.rotation / 90)] ||
         this.boardGame.tiles[t.id - this.boardGame.cols].borders[2] == 0
       ) {
         isTopValid = true;
@@ -141,7 +141,9 @@ export class DragService {
     if (t.id % this.boardGame.cols != this.boardGame.cols - 1) {
       if (
         this.boardGame.tiles[t.id + 1].borders[3] ==
-          this.cardInHand.borders[(1 + this.cardInHand.rotation / 90) % 4] ||
+          this.cardInHand.borders[
+            (1 + (4 - this.cardInHand.rotation / 90)) % 4
+          ] ||
         this.boardGame.tiles[t.id + 1].borders[3] == 0
       ) {
         isRightValid = true;
@@ -156,7 +158,9 @@ export class DragService {
     if (t.id < this.boardGame.tiles.length - this.boardGame.cols) {
       if (
         this.boardGame.tiles[t.id + this.boardGame.cols].borders[0] ==
-          this.cardInHand.borders[(2 + this.cardInHand.rotation / 90) % 4] ||
+          this.cardInHand.borders[
+            (2 + (4 - this.cardInHand.rotation / 90)) % 4
+          ] ||
         this.boardGame.tiles[t.id + this.boardGame.cols].borders[0] == 0
       ) {
         isBottomValid = true;
@@ -171,7 +175,9 @@ export class DragService {
     if (t.id % this.boardGame.cols != 0) {
       if (
         this.boardGame.tiles[t.id - 1].borders[1] ==
-          this.cardInHand.borders[(3 + this.cardInHand.rotation / 90) % 4] ||
+          this.cardInHand.borders[
+            (3 + (4 - this.cardInHand.rotation / 90)) % 4
+          ] ||
         this.boardGame.tiles[t.id - 1].borders[1] == 0
       ) {
         isLeftValid = true;
