@@ -22,7 +22,7 @@ export class GameService {
         state: StateTileGame.Idle,
         borders: [0, 0, 0, 0],
         rotation: 0,
-        classCss: 'rotation0',
+        classCss: 'rotation0 imgTileIdleAnimation',
       });
     }
 

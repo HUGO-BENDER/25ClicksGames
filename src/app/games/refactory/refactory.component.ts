@@ -75,11 +75,11 @@ export class RefactoryComponent implements OnInit {
     this.cardInHand = {
       id: 101,
       description: 'desc_101',
-      typeTileGame: TypeTileGame.Cannon,
+      typeTileGame: TypeTileGame.CurvedConnector,
       state: StateTileGame.Idle,
-      borders: [0, 1, 0, 0],
+      borders: [1, 1, 0, 0],
       rotation: 0,
-      classCss: 'rotation0',
+      classCss: 'rotation0 imgTileIdleAnimation',
       dragEnable: true,
     };
 
@@ -140,34 +140,34 @@ export class RefactoryComponent implements OnInit {
 
   //#region Auxiliares
 
-  copyTileData(tileFrom: TileGame, tileTo: TileGame, bk: boolean = true) {
-    if (bk) {
-      tileTo.previousValues = {
-        id: tileTo.id,
-        description: tileTo.description,
-        typeTileGame: tileTo.typeTileGame,
-        state: tileTo.state,
-        borders: [
-          tileTo.borders[0],
-          tileTo.borders[1],
-          tileTo.borders[2],
-          tileTo.borders[3],
-        ],
-        rotation: tileTo.rotation,
-        classCss: tileTo.classCss,
-      };
-      if (tileFrom) {
-        tileTo.description = tileFrom.description;
-        tileTo.typeTileGame = tileFrom.typeTileGame;
-        tileTo.rotation = tileFrom.rotation;
-        tileTo.classCss = tileFrom.classCss;
-      } else {
-        tileTo.description = null;
-        tileTo.typeTileGame = TypeTileGame.emptySpace;
-        tileTo.rotation = 0;
-        tileTo.classCss = null;
-      }
-    }
-  }
+  // copyTileData(tileFrom: TileGame, tileTo: TileGame, bk: boolean = true) {
+  //   if (bk) {
+  //     tileTo.previousValues = {
+  //       id: tileTo.id,
+  //       description: tileTo.description,
+  //       typeTileGame: tileTo.typeTileGame,
+  //       state: tileTo.state,
+  //       borders: [
+  //         tileTo.borders[0],
+  //         tileTo.borders[1],
+  //         tileTo.borders[2],
+  //         tileTo.borders[3],
+  //       ],
+  //       rotation: tileTo.rotation,
+  //       classCss: tileTo.classCss,
+  //     };
+  //     if (tileFrom) {
+  //       tileTo.description = tileFrom.description;
+  //       tileTo.typeTileGame = tileFrom.typeTileGame;
+  //       tileTo.rotation = tileFrom.rotation;
+  //       tileTo.classCss = tileFrom.classCss;
+  //     } else {
+  //       tileTo.description = null;
+  //       tileTo.typeTileGame = TypeTileGame.emptySpace;
+  //       tileTo.rotation = 0;
+  //       tileTo.classCss = null;
+  //     }
+  //   }
+  // }
   //#endregion
 }

@@ -3,31 +3,31 @@
     *ngIf="TileData.typeTileGame == _TypeTileGame.emptySpace"
     [ngClass]="['imgTile', TileData.classCss]"
   >
-    {{ TileData.classCss }}
+    {{ TileData.id }}
   </div>
   <div
     *ngIf="TileData.typeTileGame == _TypeTileGame.Reactor"
     [ngClass]="['imgTile', 'imgTileIdleReactor', TileData.classCss]"
   >
-    {{ TileData.classCss }}
+    {{ TileData.id }}
   </div>
   <div
     *ngIf="TileData.typeTileGame == _TypeTileGame.StraightConnector"
     [ngClass]="['imgTile', 'imgTileIdleStraight', TileData.classCss]"
   >
-    {{ TileData.classCss }}
+    {{ TileData.id }}
   </div>
   <div
     *ngIf="TileData.typeTileGame == _TypeTileGame.CurvedConnector"
     [ngClass]="['imgTile', 'imgTileIdleCurved', TileData.classCss]"
   >
-    {{ TileData.classCss }}
+    {{ TileData.id }}
   </div>
   <div
     *ngIf="TileData.typeTileGame == _TypeTileGame.Cannon"
     [ngClass]="['imgTile', 'imgTileIdleCannon', TileData.classCss]"
   >
-    {{ TileData.classCss }}
+    {{ TileData.id }}
   </div>
 
   <!-- <div

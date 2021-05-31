@@ -23,6 +23,7 @@ Step 003:
 Step 004:
 	clean proyect
     Add this file StepsBySteps
+	Optional [Config and plugin VS Code]
 
 Step 005
 	git remote add origin https://github.com/HUGO-BENDER/25ClicksGames.git
@@ -35,7 +36,7 @@ Step 006:
 	var isLoading
 	css for screen src\styles.scss    is global css
 	
-Step 007:
+Step 007: Create Mains Components
 	Start Routes y structure of the site
 	create ng g module components/appRouting
 	or move app-routing.module.ts to components/app-routing
@@ -79,6 +80,11 @@ Step 009:
 				<div class="game-controls-rigth">
 			<div class="game-controls-main">
 			
+			
+			
+			
+			
+			
 Step 010
 	(Create the board)
 	add Pan Zoom
@@ -102,7 +108,10 @@ Step 011
 				
 				
 				
+Angular Language Service
 				
 				
 https://graphicriver.net/item/space-shooter-sprites-vol2/17298810				
 https://freesvg.org/	
+
+http://localhost:4200/games/refactory/sfas/asfdsa

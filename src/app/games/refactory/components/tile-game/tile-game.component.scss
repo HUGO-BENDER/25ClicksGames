@@ -63,24 +63,24 @@
     }
   }
 
+  .imgTileIdleAnimation {
+    animation: playX 1s steps(5) infinite, playY 2s steps(2) infinite;
+  }
+
   .imgTileIdleReactor {
     background-image: url("../../../../../assets/refactory/reactor.svg");
-    animation: playX 1s steps(5) infinite, playY 2s steps(2) infinite;
   }
 
   .imgTileIdleStraight {
     background-image: url("../../../../../assets/refactory/StraightConnector.svg");
-    animation: playX 1s steps(5) infinite, playY 2s steps(2) infinite;
   }
 
   .imgTileIdleCurved {
     background-image: url("../../../../../assets/refactory/CurvedConnector.svg");
-    animation: playX 1s steps(5) infinite, playY 2s steps(2) infinite;
   }
 
   .imgTileIdleCannon {
     background-image: url("../../../../../assets/refactory/cannon.svg");
-    animation: playX 1s steps(5) infinite, playY 2s steps(2) infinite;
   }
 
   @keyframes playX {
