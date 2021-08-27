@@ -10,7 +10,7 @@ import {
   BoardGame,
   StateTileGame,
   TileGame,
-  TypeTileGame,
+  LayersTileGame,
 } from 'src/app/components/app-model/board';
 import { GameService } from './services/game-service.service';
 import { DragService } from './services/drag-service.service';
@@ -45,8 +45,10 @@ export class RefactoryComponent implements OnInit {
   stateButtons = 'inside';
   stateGame = 0;
   boardGame: BoardGame;
+  styleCalculateGrid: object;
   cardInHand: TileGame;
 
+  // imgOnDrag :any;
   idLastTileOnDragOver = -1;
   counterDragDrop = 0;
 
@@ -72,18 +74,23 @@ export class RefactoryComponent implements OnInit {
 
   StartGame() {
     this.boardGame = this.svcGame.getBoard('ddddd');
-    this.cardInHand = {
-      id: 101,
-      description: 'desc_101',
-      typeTileGame: TypeTileGame.CurvedConnector,
-      state: StateTileGame.Idle,
-      borders: [1, 1, 0, 0],
-      rotation: 0,
-      classCss: 'rotation0 imgTileIdleAnimation',
-      dragEnable: true,
-    };
+    this.styleCalculateGrid = this.calculateStyleGrid();
+    this.cardInHand =  this.svcGame.getCardInHand('ddddd');
 
     this.svcDrag.InicializeService(this.boardGame, this.cardInHand);
+  }
+  calculateStyleGrid(): object {
+    let boardWidth = this.boardGame.cols * 192;
+    let boardHeight = this.boardGame.rows * 192;
+    let sty = { 
+      "display" : "grid" ,
+      "grid-template-columns" : " auto".repeat(this.boardGame.cols),
+      "max-width.px" :  boardWidth,
+      "min-width.px" :  boardWidth ,
+      "min-height.px" :  boardHeight,
+      "max-height.px" :  boardHeight 
+    }
+    return sty;
   }
 
   // -- Botons

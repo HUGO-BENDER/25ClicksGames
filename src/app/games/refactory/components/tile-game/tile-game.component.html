@@ -1,33 +1,57 @@
 <div class="tileGame" (click)="ActionTile()" id="{{ TileData.id }}">
-  <div
-    *ngIf="TileData.typeTileGame == _TypeTileGame.emptySpace"
-    [ngClass]="['imgTile', TileData.classCss]"
-  >
-    {{ TileData.id }}
+  <div *ngIf="!TileData.layers" >
+    void {{ TileData.id }}
   </div>
-  <div
-    *ngIf="TileData.typeTileGame == _TypeTileGame.Reactor"
-    [ngClass]="['imgTile', 'imgTileIdleReactor', TileData.classCss]"
-  >
-    {{ TileData.id }}
-  </div>
-  <div
-    *ngIf="TileData.typeTileGame == _TypeTileGame.StraightConnector"
-    [ngClass]="['imgTile', 'imgTileIdleStraight', TileData.classCss]"
-  >
-    {{ TileData.id }}
-  </div>
-  <div
-    *ngIf="TileData.typeTileGame == _TypeTileGame.CurvedConnector"
-    [ngClass]="['imgTile', 'imgTileIdleCurved', TileData.classCss]"
-  >
-    {{ TileData.id }}
-  </div>
-  <div
-    *ngIf="TileData.typeTileGame == _TypeTileGame.Cannon"
-    [ngClass]="['imgTile', 'imgTileIdleCannon', TileData.classCss]"
-  >
-    {{ TileData.id }}
+  <div *ngIf="TileData.layers">
+    <div *ngIf="TileData.layers.emptySpace">
+      {{ TileData.id }}
+    </div>
+    <div
+      *ngIf="TileData.layers.ConnectorBase"
+      [ngClass]="['imgTile', 'imgTileConnectorBaseIdle', TileData.classCss]"
+    >
+      {{ TileData.id }}
+    </div>
+    <div
+      *ngIf="TileData.layers.ConnectorCurve"
+      [ngClass]="['imgTile', 'imgTileConnectorCurveIdle', TileData.classCss]"
+    >
+      {{ TileData.id }}
+    </div>
+    <div
+      *ngIf="TileData.layers.ConnectorStraight"
+      [ngClass]="['imgTile', 'imgTileConnectorStraightIdle', TileData.classCss]"
+    >
+      {{ TileData.id }}
+    </div>
+    <div
+      *ngIf="TileData.layers.ConnectorT"
+      [ngClass]="['imgTile', 'imgTileConnectorTIdle', TileData.classCss]"
+    >
+      {{ TileData.id }}
+    </div>
+    <div
+      *ngIf="TileData.layers.Platform"
+      [ngClass]="['imgTile', 'imgTilePlatfomIdle', TileData.classCss]"
+    >
+      {{ TileData.id }}
+    </div>
+    <div *ngIf="TileData.layers === null">
+      {{ TileData.id }}
+    </div>
+
+    <div
+      *ngIf="TileData.layers.Reactor"
+      [ngClass]="['imgTile', 'imgTileReactorIdle', TileData.classCss]"
+    >
+      {{ TileData.id }}
+    </div>
+    <div
+      *ngIf="TileData.layers.Weapon01"
+      [ngClass]="['imgTile', 'imgTileWeapon01Idle', TileData.classCss]"
+    >
+      {{ TileData.id }}
+    </div>
   </div>
 
   <!-- <div

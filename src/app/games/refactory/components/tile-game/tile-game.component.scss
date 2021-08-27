@@ -64,23 +64,35 @@
   }
 
   .imgTileIdleAnimation {
-    animation: playX 1s steps(5) infinite, playY 2s steps(2) infinite;
+    animation: playX 1s steps(5) infinite, playY 5s steps(5) infinite;
   }
 
-  .imgTileIdleReactor {
-    background-image: url("../../../../../assets/refactory/reactor.svg");
+.imgTileConnectorBaseIdle{
+  background-image: url("../../../../../assets/refactory/Connector_Base_idle.png");
+}
+
+.imgTileConnectorCurveIdle{
+  background-image: url("../../../../../assets/refactory/Connector_Curve_idle.png");
+}
+
+  .imgTileConnectorStraightIdle {
+    background-image: url("../../../../../assets/refactory/Connector_Straight_idle.png");
   }
 
-  .imgTileIdleStraight {
-    background-image: url("../../../../../assets/refactory/StraightConnector.svg");
+  .imgTileConnectorTIdle {
+    background-image: url("../../../../../assets/refactory/Connector_T_idle.png");
   }
 
-  .imgTileIdleCurved {
-    background-image: url("../../../../../assets/refactory/CurvedConnector.svg");
+.imgTilePlatfomIdle{
+  background-image: url("../../../../../assets/refactory/Platform_idle.png");
+}
+
+  .imgTileReactorIdle {
+    background-image: url("../../../../../assets/refactory/Reactor_idle.png");
   }
 
-  .imgTileIdleCannon {
-    background-image: url("../../../../../assets/refactory/cannon.svg");
+  .imgTileWeapon01Idle {
+    background-image: url("../../../../../assets/refactory/Weapon01_idle.png");
   }
 
   @keyframes playX {
@@ -88,7 +100,7 @@
       background-position-x: 0px;
     }
     to {
-      background-position-x: -500px;
+      background-position-x: -960px;
     }
   }
   @keyframes playY {
@@ -96,7 +108,7 @@
       background-position-y: 0px;
     }
     to {
-      background-position-y: -200px;
+      background-position-y: -960px;
     }
   }
 
@@ -107,7 +119,7 @@
     }
     100% {
       width: 0%;
-      left: 50px;
+      left: 96px;
     }
   }
   @keyframes drop-horizontal {
@@ -117,7 +129,7 @@
     }
     100% {
       height: 0%;
-      top: 50px;
+      top: 96px;
     }
   }
 }

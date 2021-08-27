@@ -18,7 +18,7 @@
         (dragleave)="svcDrag.onDragLeave($event)"
         (dragenter)="svcDrag.onDragEnter($event)"
       >
-        <div class="boardgameGrid">
+        <div [ngStyle]="styleCalculateGrid">
           <app-tile-game
             (drop)="svcDrag.onDrop($event, t)"
             (dragover)="svcDrag.onDragOver($event, t)"
@@ -81,7 +81,9 @@
           (dragstart)="svcDrag.startDrag($event)"
           (dragend)="svcDrag.finishDrag($event)"
         >
-          <app-tile-game [TileData]="cardInHand"></app-tile-game>
+          <div class="scaleTile">
+            <app-tile-game [TileData]="cardInHand"></app-tile-game>
+          </div>
         </div>
         <button mat-stroked-button (click)="rotateCardInHand(-90)">
           <mat-icon

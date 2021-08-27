@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { TileGame, TypeTileGame } from 'src/app/components/app-model/board';
+import { TileGame, LayersTileGame } from 'src/app/components/app-model/board';
 
 @Component({
   selector: 'app-tile-game',
@@ -9,14 +9,12 @@ import { TileGame, TypeTileGame } from 'src/app/components/app-model/board';
 export class TileGameComponent implements OnInit {
   @Input() TileData: TileGame;
 
-  _TypeTileGame = TypeTileGame;
-
   constructor() {}
 
   ngOnInit(): void {}
 
   ActionTile() {
-    console.log(this.TileData.typeTileGame + '  ' + this.TileData.classCss);
+    console.log(this.TileData.id + '  ' + this.TileData.description);
     console.log('this.TileData.dragEnable ' + this.TileData.dragEnable);
     // if (this.TileData.typeTileGame === 4) {
     //   this.TileData.typeTileGame = 0;
